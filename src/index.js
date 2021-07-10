@@ -87,14 +87,14 @@ function Square(props){
         'Go to the game start';
       return(
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className="btn" onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
       });
 
       let status;
       if (winner) {
-        status = 'Winner: ' + winner;
+        status = 'Winner: ' + winner ;
       } else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
@@ -107,7 +107,7 @@ function Square(props){
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>
+            <div className="status-div">{status}</div>
             <ol>{moves}</ol>
           </div>
         </div>

@@ -1,6 +1,7 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    margin: 0px;
+    padding: 0;
   }
   
   ol, ul {
@@ -16,6 +17,15 @@ body {
   .status {
     margin-bottom: 10px;
   }
+  .status-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+    color: #34495E;
+    font-weight: 800;
+    font-size: 23px;
+  }
   
   .square {
     background: #fff;
@@ -24,12 +34,29 @@ body {
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 34px;
+    height: 54px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 54px;
+  }
+  .square:hover {
+    background: rgb(207, 206, 206);
+    border:none;
+  }
+  .btn{
+    background: #FFBD33;
+    color: #fff;
+    padding: 5% 20px;
+    border: #FFBD33 1px solid;
+    margin: 10px 0;
+    cursor:pointer;
+  }
+  .btn:hover{
+    background: #fff;
+    color: #FFBD33;
+    border: #FFBD33 1px solid;
   }
   
   .square:focus {
@@ -43,9 +70,52 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 0px);
   }
-  
+  .game-board {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #34495E;
+}
   .game-info {
-    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    background: #ECF0F1;
   }
-  
+  .win{
+    background: #2ECC71;
+    width: 100%;
+    color:#fff;
+  }
+  @media only screen and (max-width:600px){
+    .game {
+      flex-direction: column;
+      height: calc(100vh - 0px);
+    }
+    .game-board{
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .game-info {
+      margin: 0;
+      height: 60%;
+      overflow: scroll;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
